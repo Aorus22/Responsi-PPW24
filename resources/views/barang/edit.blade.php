@@ -29,7 +29,7 @@
         </div>
         <div class="mb-6">
             <label for="harga" class="block text-sm font-medium mb-2">Harga:</label>
-            <input type="number" class="w-full px-3 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="harga" name="harga" value="{{ $barang->harga }}" step="1000">
+            <input type="number" class="w-full px-3 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="harga" name="harga" value="{{ $barang->harga }}" step="100">
         </div>
         <div class="mb-6">
             <label for="jenis_barang_id" class="block text-sm font-medium mb-2">Jenis Barang:</label>
