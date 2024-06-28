@@ -61,7 +61,7 @@
                 <h2 class="text-2xl font-semibold mb-4">Masukkan Jumlah Barang</h2>
                 <form id="update-cart-form" action="{{ route('updateCartItem') }}" method="POST">
                     @csrf
-                    <input type="hidden" id="barang_id" name="barang_id">
+                    <input type="hidden" id="key" name="key">
                     <label for="jumlah" class="block mb-2">Jumlah:</label>
                     <input type="number" id="jumlah" name="jumlah" class="w-full px-3 py-2 text-black border rounded-lg focus:outline-none focus:ring focus:border-blue-500" required>
                     <div class="mt-4 flex justify-end">
@@ -74,7 +74,7 @@
 
         <script>
             function openModal(key) {
-                document.getElementById('barang_id').value = key;
+                document.getElementById('key').value = key;
                 document.getElementById('modal').classList.remove('hidden');
             }
 

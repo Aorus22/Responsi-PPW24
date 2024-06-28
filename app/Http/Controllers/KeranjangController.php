@@ -57,19 +57,19 @@ class KeranjangController extends Controller
 
     public function updateCartItem(Request $request)
     {
-        $barang_id = $request->input('barang_id');
+        $key = $request->input('key');
         $jumlah = $request->input('jumlah');
 
         $keranjang = session()->get('keranjang');
 
-        if (!isset($keranjang[$barang_id])) {
+        if (!isset($keranjang[$key])) {
             return redirect()->route('keranjang')->with('error', 'Item tidak ditemukan dalam keranjang.');
         }
 
-        $item = $keranjang[$barang_id];
+        $item = $keranjang[$key];
         $item['jumlah'] = $jumlah;
 
-        $keranjang[$barang_id] = $item;
+        $keranjang[$key] = $item;
         session()->put('keranjang', $keranjang);
 
         return redirect()->route('keranjang')->with('success', 'Jumlah barang berhasil diperbarui.');
